@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>学生</title>
+<link rel="stylesheet" type="text/css" href="javascript/lib-master/theme-chalk/index.css"/>
+
+<script src="javascript/json3.min.js"></script>
+<script src="javascript/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascript/axios.min.js"></script>
+<script src="javascript/lib-master/index.js"></script>
+</head>
+<body style="background-color:#FFFFFF;padding: 20px;">
+	<div id="mainScene">
+		<h1>学生</h1>
+		<template>
+			<div style="width: 1210px;">
+				<el-card header="在读学生" style="font-size: 20px;"  >
+					<el-card header="博士" style="font-size: 18px;"  >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card shadow="hover" >
+									<image src="images/ZhaoYuHui.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>赵宇慧</b></p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+					<br>
+                    <el-card header="硕士2021级" style="font-size: 18px;"  >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card   shadow="hover">
+									<image src="images/Zhang-Lilin.jpg" style = "height:227px; width:227px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>张莉琳</b></p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/Zhu-Xinyu.jpg" style = "height:221px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>朱欣宇</b></p>
+								</el-card>
+							</el-col>
+                            <el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/Chen-Jingyu.jpg" style = "height:170px; width:255px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>陈靖宇</b></p>
+								</el-card>
+							</el-col>
+                            <el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/Li-Zhuhang.jpg" style = "height:227px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>李祝行</b></p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+					<br>
+					<el-card header="硕士2020级" style="font-size: 18px;"  >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card   shadow="hover">
+									<image src="images/ZhouZhiHui.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>周志辉</b></p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/YeYaXuan.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>叶雅旋</b></p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+					<br>
+					
+					
+					<!-- <el-divider>
+					</el-divider> -->
+				</el-card>
+				<br>
+				<el-card header="毕业学生" style="font-size: 20px;" >
+					<el-card header="博士" style="font-size: 18px;"  >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/MaYuChi.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>马宇驰</b></p>
+									<p style="font-size: 15px; text-align: center;">华为（深圳）</p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+					<br>
+                    
+                    <el-card header="硕士2019级" style="font-size: 18px;" >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card   shadow="hover">
+									<image src="images/YangXiaoHan.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>杨筱涵</b></p>
+                                    <p style="font-size: 15px; text-align: center;">招银网络科技（成都）</p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/WangRui.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center; "><b>王睿</b></p>
+                                    <p style="font-size: 15px; text-align: center;">虾皮购物</p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/ZhaoXiaoYun.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>赵晓云</b></p>
+                                    <p style="font-size: 15px; text-align: center;">百度</p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/DengChengYao.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>邓程耀</b></p>
+                                    <p style="font-size: 15px; text-align: center;">中国人寿研发中心</p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/LeiXiaoYi.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>雷小易</b></p>
+                                    <p style="font-size: 15px; text-align: center;">成都海康威视</p>
+								</el-card>
+							</el-col>	
+						</el-row>
+					</el-card>
+					<br>
+                    
+                    <el-card header="硕士2018级" style="font-size: 18px;"  >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card   shadow="hover">
+									<image src="images/YiQiaoMin.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>易乔敏</b></p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/DuZiWen.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>杜子文</b></p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card  shadow="hover">
+									<image src="images/ChenLiHua.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>陈丽华</b></p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/CuiChen.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>崔宸</b></p>
+								</el-card>
+							</el-col>	
+						</el-row>
+					</el-card>
+                    <br>
+					<el-card header="硕士2017级" style="font-size: 18px;"  >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/LuoHuanRui.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>罗欢芮</b></p>
+									<p style="font-size: 15px; text-align: center;">招银网络科技（成都）</p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+					<br>
+					<el-card header="硕士2016级" style="font-size: 18px;">
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/WuYi.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>伍艺</b></p>
+									<p style="font-size: 15px; text-align: center;">华为（深圳）</p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+					<br>
+					<el-card header="硕士2015级" style="font-size: 18px;" >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/HouYunFeng.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>侯雲峰</b></p>
+									<p style="font-size: 15px; text-align: center;">华为（成都）</p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/ZhangZhaoKun.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>张兆坤</b></p>
+									<p style="font-size: 15px; text-align: center;">招银网络科技（成都）</p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+					<br>
+					<el-card header="硕士2014级" style="font-size: 18px;"  >
+						<el-row :gutter="15">
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/WangJinCe.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>王金策</b></p>
+									<p style="font-size: 12px; text-align: center;">同花顺网络信息股份有限公司</p>
+								</el-card>
+							</el-col>
+							<el-col :span="4.5">
+								<el-card shadow="hover">
+									<image src="images/ZhangDuoDuo.jpg" style = "height:170px; width:170px"></image>
+									<p style="font-size: 15px; text-align: center;"><b>张朵朵</b></p>
+									<p style="font-size: 12px; text-align: center;">中国农业银行研发中心（北京）</p>
+								</el-card>
+							</el-col>
+						</el-row>
+					</el-card>
+				</el-card>
+				<el-backtop></el-backtop>
+			</div>
+			
+		</template>
+	</div>
+	<script>
+		var vueData = {};
+		var vueMethod = {
+			focus: function(e) {
+				try {
+					_t.fastKey.focusElem(e);
+				} catch(e) {}
+			}
+		};
+		var vueMounted = function() {}
+		var myMethod = {}
+		for (var key in myMethod) {
+			vueMethod[key] = myMethod[key];
+		}
+		var myMounted = null
+		if (myMounted != null) {
+			vueMounted = myMounted;
+		}
+		var myData = {}
+		Object.assign(vueData, myData);
+		var _t = this;
+		var Ctor = Vue.extend({
+			data: function() {
+				return vueData;
+			},
+			mounted: vueMounted,
+			methods: vueMethod
+		});
+		new Ctor().$mount('#mainScene');
+		new McECharts().render();</script>
+</body>
+</html>
